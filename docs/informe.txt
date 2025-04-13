@@ -1,1 +1,2 @@
 Este es un archivo de prueba para el informe.
+Ahora este archivo sufrio un cambio.
