@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Variables
-fecha=$(date +"%Y%m%d_%H%M%S")
-origen="docs/informe.txt"
-destino="respaldos/informe_$fecha.txt"
+ORIGEN="docs/informe.txt"
+DESTINO="respaldos/informe_$(date +%Y-%m-%d_%H-%M-%S).txt"
+LOG="log_respaldo.txt"
 
-# Validar existencia del archivo origen
-if [ -f "$origen" ]; then
-    cp "$origen" "$destino"
-    echo "Respaldo creado en: $destino"
+# Verificar si existe el archivo
+if [ -f "$ORIGEN" ]; then
+    cp "$ORIGEN" "$DESTINO"
+    echo "Respaldo generado: $DESTINO"
+    echo "[$(date)] Respaldo generado: $DESTINO" >> "$LOG"
 else
-    echo "Error: El archivo $origen no existe. No se realizó el respaldo."
+    echo "El archivo $ORIGEN no existe. No se generó respaldo."
+    echo "[$(date)] ERROR: No se encontró $ORIGEN" >> "$LOG"
 fi
 

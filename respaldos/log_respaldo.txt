@@ -1,0 +1,2 @@
+[sáb 12 abr 2025 19:14:51 -05] ERROR: No se encontró docs/informe.txt
+[sáb 12 abr 2025 19:16:42 -05] ERROR: No se encontró docs/informe.txt
